@@ -1,1 +1,1 @@
-condo web sot as required by law
+Farnham O cond web site starter package.
