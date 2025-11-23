@@ -1,0 +1,467 @@
+<!--
+Multi-page refactor for Farnham O Condo Corporation
+Files included below. Save each `<!-- FILE: path -->` block as the corresponding file.
+-->
+
+<!-- FILE: /index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Farnham O — Home</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1>Farnham O Condo Corporation</h1>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/notices.html">Notices</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/admin.html" class="admin-link">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h2>Welcome to our community</h2>
+      <p>News, notices, and a place for residents to share feedback.</p>
+    </section>
+
+    <section id="comments" class="card">
+      <h3>Residents' Comments</h3>
+      <form id="commentForm">
+        <label>Name <input id="name" required></label>
+        <label>Comment <textarea id="comment" rows="3" required></textarea></label>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+
+      <ul id="commentsList" class="comments-list">
+        <li class="muted">Loading comments…</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <small>&copy; 2025 Farnham O Condo Corporation</small>
+    </div>
+  </footer>
+
+  <script>window.API_BASE = '';</script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
+
+
+<!-- FILE: /about.html -->
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Farnham O — About</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head><body>
+  <header class="site-header"><div class="wrap"><h1>Farnham O Condo Corporation</h1>
+    <nav><a href="/">Home</a><a href="/about.html">About</a><a href="/notices.html">Notices</a><a href="/contact.html">Contact</a><a href="/admin.html" class="admin-link">Admin</a></nav>
+  </div></header>
+  <main class="wrap">
+    <div class="card"><h2>About Us</h2>
+    <p>Farnham O Condo Corporation manages building operations, maintenance, and community engagement. This site provides residents with notices, contact info, and a comments board.</p>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="wrap"><small>&copy; 2025 Farnham O Condo Corporation</small></div></footer>
+</body></html>
+
+
+<!-- FILE: /notices.html -->
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Farnham O — Notices</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head><body>
+  <header class="site-header"><div class="wrap"><h1>Farnham O Condo Corporation</h1>
+    <nav><a href="/">Home</a><a href="/about.html">About</a><a href="/notices.html">Notices</a><a href="/contact.html">Contact</a><a href="/admin.html" class="admin-link">Admin</a></nav>
+  </div></header>
+  <main class="wrap">
+    <div class="card"><h2>Latest Notices</h2>
+      <ul id="noticesList">
+        <li>No notices yet — admins can add notices from the admin panel.</li>
+      </ul>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="wrap"><small>&copy; 2025 Farnham O Condo Corporation</small></div></footer>
+  <script src="/assets/js/notices.js"></script>
+</body></html>
+
+
+<!-- FILE: /contact.html -->
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Farnham O — Contact</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head><body>
+  <header class="site-header"><div class="wrap"><h1>Farnham O Condo Corporation</h1>
+    <nav><a href="/">Home</a><a href="/about.html">About</a><a href="/notices.html">Notices</a><a href="/contact.html">Contact</a><a href="/admin.html" class="admin-link">Admin</a></nav>
+  </div></header>
+  <main class="wrap">
+    <div class="card"><h2>Contact</h2>
+      <p>Condo Office: <strong>(555) 555-0123</strong></p>
+      <p>Email: <a href="mailto:management@farnhamo.example">management@farnhamo.example</a></p>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="wrap"><small>&copy; 2025 Farnham O Condo Corporation</small></div></footer>
+</body></html>
+
+
+<!-- FILE: /admin.html -->
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Farnham O — Admin</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head><body>
+  <header class="site-header"><div class="wrap"><h1>Admin — Farnham O</h1>
+    <nav><a href="/">Home</a><a href="/about.html">About</a><a href="/notices.html">Notices</a><a href="/contact.html">Contact</a><a href="/admin.html" class="admin-link">Admin</a></nav>
+  </div></header>
+
+  <main class="wrap">
+    <div id="loginCard" class="card">
+      <h2>Administrator Login</h2>
+      <form id="loginForm">
+        <label>Email <input id="email" type="email" required></label>
+        <label>Password <input id="password" type="password" required></label>
+        <button class="btn" type="submit">Sign In</button>
+      </form>
+      <p class="small">This page calls the backend auth endpoint. See server deployment notes.</p>
+    </div>
+
+    <div id="adminControls" class="card" style="display:none">
+      <h2>Admin Controls</h2>
+      <div>
+        <button id="logoutBtn" class="btn">Logout</button>
+        <button id="toggleEditMode" class="btn">Toggle Edit Mode</button>
+        <button id="deleteAll" class="btn btn-danger">Delete All Comments</button>
+      </div>
+
+      <hr>
+      <h3>Manage Notices</h3>
+      <form id="noticeForm">
+        <input id="noticeTitle" placeholder="Title" required>
+        <textarea id="noticeBody" rows="3" placeholder="Notice text" required></textarea>
+        <button class="btn" type="submit">Save Notice</button>
+      </form>
+      <ul id="adminNotices"></ul>
+    </div>
+  </main>
+
+  <footer class="site-footer"><div class="wrap"><small>&copy; 2025 Farnham O Condo Corporation</small></div></footer>
+
+  <script>window.API_BASE='';</script>
+  <script src="/assets/js/admin.js"></script>
+</body></html>
+
+
+<!-- FILE: /assets/css/styles.css -->
+:root{--accent:#003366;--muted:#7a7a7a}
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;margin:0;background:#f5f7fa;color:#222}
+.wrap{max-width:1024px;margin:0 auto;padding:20px}
+.site-header{background:var(--accent);color:#fff;padding:20px 0}
+.site-header h1{margin:0}
+.site-header nav{margin-top:10px}
+.site-header nav a{color:#fff;margin-right:12px;text-decoration:none;font-weight:600}
+.card{background:#fff;border-radius:8px;padding:18px;box-shadow:0 6px 18px rgba(20,30,50,0.06);margin-bottom:18px}
+.hero{padding:30px 18px;text-align:center}
+.btn{background:var(--accent);color:#fff;padding:8px 12px;border-radius:6px;border:none;cursor:pointer}
+.btn-danger{background:#cc0000}
+.comments-list{list-style:none;padding:0;margin:0}
+.comments-list li{padding:10px;border-bottom:1px solid #eee}
+.muted{color:var(--muted)}
+.admin-link{background:rgba(255,255,255,0.12);padding:4px 8px;border-radius:4px}
+small{color:#666}
+label{display:block;margin-bottom:8px}
+input,textarea{width:100%;padding:8px;border:1px solid #ddd;border-radius:6px}
+
+
+<!-- FILE: /assets/js/main.js -->
+// Main frontend logic: comments with backend fallback and localStorage persistence
+(async function(){
+  const API = window.API_BASE || '';
+  const commentsList = document.getElementById('commentsList');
+  const form = document.getElementById('commentForm');
+
+  function getLocal(){ return JSON.parse(localStorage.getItem('farnham_comments')||'[]'); }
+  function setLocal(arr){ localStorage.setItem('farnham_comments', JSON.stringify(arr)); }
+
+  async function fetchComments(){
+    if(!API) return getLocal();
+    try{ const r = await fetch(API + '/api/comments'); if(!r.ok) throw new Error(); return await r.json(); }catch(e){ return getLocal(); }
+  }
+
+  function render(list){
+    commentsList.innerHTML = '';
+    if(!list || list.length===0){ commentsList.innerHTML = '<li class="muted">No comments yet.</li>'; return; }
+    list.forEach((c,i)=>{
+      const li = document.createElement('li');
+      const date = new Date(c.timestamp||Date.now()).toLocaleString();
+      li.innerHTML = `<strong>${escapeHtml(c.name)}</strong> <em class="muted">(${date})</em><div>${escapeHtml(c.comment)}</div>`;
+      commentsList.appendChild(li);
+    })
+  }
+
+  function escapeHtml(s){ return String(s).replace(/[&<>\"]/g, function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const comment = document.getElementById('comment').value.trim();
+    if(!name||!comment) return;
+    const entry = { name, comment, timestamp: Date.now() };
+    // try backend
+    if(API){
+      try{ const r = await fetch(API+'/api/comments',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(entry)}); if(r.ok){ load(); form.reset(); return; } }catch(e){}
+    }
+    const arr = getLocal(); arr.push(entry); setLocal(arr); load(); form.reset();
+  })
+
+  async function load(){ const items = await fetchComments(); render(items); }
+  await load();
+})();
+
+
+<!-- FILE: /assets/js/notices.js -->
+// Placeholder for notices logic (future: fetch from backend)
+
+
+<!-- FILE: /assets/js/admin.js -->
+// Simple admin page client: login, manage notices and comments via backend
+(function(){
+  const API = window.API_BASE || '';
+  const loginForm = document.getElementById('loginForm');
+  const adminControls = document.getElementById('adminControls');
+  const loginCard = document.getElementById('loginCard');
+  const logoutBtn = document.getElementById('logoutBtn');
+  const deleteAll = document.getElementById('deleteAll');
+  const noticeForm = document.getElementById('noticeForm');
+  const adminNotices = document.getElementById('adminNotices');
+
+  function setToken(t){ if(t) localStorage.setItem('farnham_token',t); else localStorage.removeItem('farnham_token'); }
+  function getToken(){ return localStorage.getItem('farnham_token'); }
+  function authHeaders(){ const tk=getToken(); return tk?{ 'Authorization':'Bearer '+tk }:{}};
+
+  loginForm.addEventListener('submit', async function(e){
+    e.preventDefault();
+    if(!API){ alert('Backend not configured. Set API_BASE in admin.html to your backend URL.'); return; }
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value.trim();
+    try{
+      const res = await fetch(API+'/api/auth/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,password})});
+      if(!res.ok) throw new Error('login');
+      const data = await res.json(); setToken(data.token); showAdmin();
+    }catch(e){ alert('Login failed'); }
+  });
+
+  function showAdmin(){ loginCard.style.display='none'; adminControls.style.display='block'; }
+  function hideAdmin(){ loginCard.style.display='block'; adminControls.style.display='none'; }
+
+  if(getToken()) showAdmin(); else hideAdmin();
+
+  logoutBtn.addEventListener('click', ()=>{ setToken(null); hideAdmin(); });
+
+  deleteAll.addEventListener('click', async ()=>{
+    if(!confirm('Delete all comments?')) return;
+    if(!API){ localStorage.removeItem('farnham_comments'); alert('Local comments deleted'); return; }
+    const res = await fetch(API + '/api/comments', { method:'DELETE', headers: authHeaders() });
+    if(res.ok) alert('Deleted'); else alert('Failed');
+  });
+
+  noticeForm.addEventListener('submit', function(e){ e.preventDefault(); const t=document.getElementById('noticeTitle').value.trim(); const b=document.getElementById('noticeBody').value.trim(); if(!t||!b) return; const li=document.createElement('li'); li.textContent=t+': '+b; adminNotices.appendChild(li); noticeForm.reset(); });
+})();
+
+
+<!-- FILE: /server.js -->
+const express = require('express');
+const bodyParser = require('body-parser');
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt');
+const sqlite3 = require('sqlite3').verbose();
+const path = require('path');
+const cors = require('cors');
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+const JWT_SECRET = process.env.JWT_SECRET || 'replace-me-with-secret';
+
+app.use(cors());
+app.use(bodyParser.json());
+app.use('/', express.static(path.join(__dirname, 'public')));
+
+// DB
+const db = new sqlite3.Database('./comments.db');
+db.serialize(()=>{ db.run(`CREATE TABLE IF NOT EXISTS comments (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, comment TEXT, timestamp INTEGER)`); });
+
+function auth(req,res,next){ const auth = req.headers.authorization; if(!auth) return res.status(401).send({error:'no auth'}); try{ const token = auth.split(' ')[1]; jwt.verify(token, JWT_SECRET); next(); }catch(e){ res.status(401).send({error:'invalid token'}); } }
+
+// Auth (demo user - replace with real user DB)
+const DEMO_EMAIL = process.env.DEMO_EMAIL || 'admin@example.com';
+const DEMO_HASH = bcrypt.hashSync(process.env.DEMO_PASS || 'StrongPass123', 10);
+app.post('/api/auth/login', async (req,res)=>{ const {email,password} = req.body; if(email!==DEMO_EMAIL) return res.status(401).send({error:'invalid'}); const ok = await bcrypt.compare(password, DEMO_HASH); if(!ok) return res.status(401).send({error:'invalid'}); const token = jwt.sign({email}, JWT_SECRET, {expiresIn:'8h'}); res.send({token}); });
+
+app.get('/api/comments', (req,res)=>{ db.all('SELECT id,name,comment,timestamp FROM comments ORDER BY timestamp DESC',[],(err,rows)=>{ if(err) return res.status(500).send({error:'db'}); res.send(rows); }); });
+app.post('/api/comments', (req,res)=>{ const {name,comment,timestamp} = req.body; db.run('INSERT INTO comments(name,comment,timestamp) VALUES(?,?,?)',[name,comment,timestamp], function(err){ if(err) return res.status(500).send({error:'db'}); res.status(201).send({id:this.lastID,name,comment,timestamp}); }); });
+app.put('/api/comments/:id', auth, (req,res)=>{ const {name,comment,timestamp}=req.body; db.run('UPDATE comments SET name=?,comment=?,timestamp=? WHERE id=?',[name,comment,timestamp,req.params.id], function(err){ if(err) return res.status(500).send({error:'db'}); res.sendStatus(200); }); });
+app.delete('/api/comments/:id', auth, (req,res)=>{ db.run('DELETE FROM comments WHERE id=?',[req.params.id], function(err){ if(err) return res.status(500).send({error:'db'}); res.sendStatus(204); }); });
+app.delete('/api/comments', auth, (req,res)=>{ db.run('DELETE FROM comments',[], function(err){ if(err) return res.status(500).send({error:'db'}); res.sendStatus(204); }); });
+
+app.listen(PORT, ()=>console.log('Server listening on',PORT));
+
+
+<!-- FILE: /README.md -->
+# Farnham O — Multi-page site
+
+## Files
+- `public/` — place the static site files (index.html, about.html, notices.html, contact.html, admin.html, assets/)
+- `server.js` — Express backend with SQLite and simple auth
+
+## Quickstart (local)
+1. Put static files in `public/` (or adjust express static path)
+2. `npm install express body-parser jsonwebtoken bcrypt sqlite3 cors`
+3. `node server.js`
+4. Visit `http://localhost:3000`
+
+## Deploy
+- Host the static `public/` folder on GitHub Pages, Netlify, or serve from the same server.
+- Deploy the Node server on Render/Fly/Railway. Set `JWT_SECRET` and `DEMO_PASS` env vars.
+
+
+<!-- DOCKER FILES: add below -->
+
+<!-- FILE: /Dockerfile -->
+# Use official Node LTS image
+FROM node:20-alpine
+
+# Create app directory
+WORKDIR /usr/src/app
+
+# Install app dependencies
+COPY package*.json ./
+RUN npm install --production
+
+# Bundle app source
+COPY . .
+
+# Expose port
+EXPOSE 3000
+
+# Start the server
+CMD ["node", "server.js"]
+
+
+<!-- FILE: /docker-compose.yml -->
+version: '3.8'
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./public:/usr/src/app/public:ro
+      - ./comments.db:/usr/src/app/comments.db
+    environment:
+      - JWT_SECRET=${JWT_SECRET}
+      - DEMO_EMAIL=${DEMO_EMAIL:-admin@example.com}
+      - DEMO_PASS=${DEMO_PASS:-StrongPass123}
+
+
+<!-- FILE: /.dockerignore -->
+node_modules
+npm-debug.log
+.env
+.DS_Store
+
+
+<!-- FILE: /package.json -->
+{
+  "name": "farnham-o",
+  "version": "1.0.0",
+  "description": "Farnham O Condo Corporation site + backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "sqlite3": "^5.1.6"
+  }
+}
+
+
+<!-- FILE: /README.md -->
+# Farnham O — Multi-page site (Dockerized)
+
+This project contains a static multi-page frontend (`public/`) and a Node/Express backend (`server.js`) that serves the static files and provides a comments API backed by SQLite.
+
+## Docker (recommended)
+
+### Build & run (local)
+1. Create an `.env` file in the project root with at least:
+
+```
+JWT_SECRET=your_strong_jwt_secret
+DEMO_PASS=YourAdminPassword
+```
+
+2. Start with docker-compose:
+
+```bash
+docker compose up --build
+```
+
+3. Visit `http://localhost:3000`.
+
+The `comments.db` SQLite file will be created in the project root and mounted into the container so comments persist between restarts.
+
+### Production notes
+- Ensure `JWT_SECRET` is a long random value and keep it secret.
+- Use a managed service to run the container (e.g., DigitalOcean App Platform, Render, Fly.io). Set environment variables in the provider's dashboard.
+
+## What was added
+- `Dockerfile` — builds Node app
+- `docker-compose.yml` — runs the app and exposes port 3000
+- `.dockerignore` — ignores local files that shouldn't be copied
+- `package.json` — lists dependencies for the server
+
+
+<!-- FILE: /render.yaml -->
+services:
+  - type: web
+    name: farnham-o
+    env: node
+    region: oregon
+    plan: starter
+    buildCommand: "npm install --production"
+    startCommand: "node server.js"
+    envVars:
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DEMO_EMAIL
+        value: admin@example.com
+      - key: DEMO_PASS
+        generateValue: true
+      - key: DEMO_EMAIL
+        value: admin@example.com
+      - key: DEMO_PASS
+        sync: false
+
+<!-- END OF PROJECT -->
